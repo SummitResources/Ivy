@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ivy.Test", "Ivy.Test\Ivy.Test.csproj", "{0B2C33A5-2B9D-447B-8BF1-471C95A5D32E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ivy", "Ivy\Ivy.csproj", "{EC3BC407-B2C7-4CD8-8D81-43A18F032353}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B2C33A5-2B9D-447B-8BF1-471C95A5D32E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B2C33A5-2B9D-447B-8BF1-471C95A5D32E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B2C33A5-2B9D-447B-8BF1-471C95A5D32E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B2C33A5-2B9D-447B-8BF1-471C95A5D32E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3BC407-B2C7-4CD8-8D81-43A18F032353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3BC407-B2C7-4CD8-8D81-43A18F032353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3BC407-B2C7-4CD8-8D81-43A18F032353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3BC407-B2C7-4CD8-8D81-43A18F032353}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
