@@ -1,3 +1,4 @@
+using System;
 using Ivy.Entities;
 using Ivy.Services;
 using Xunit;
@@ -36,7 +37,7 @@ namespace Ivy.Test
             order.Add(6, pencil);
 
             var exception = Assert.Throws<OrderException>(() => orderService.Fulfill(order));
-            Assert.Contains("out of stock", exception.Message);
+            Assert.Contains("out of stock", exception.Message, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

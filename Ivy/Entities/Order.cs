@@ -15,11 +15,11 @@ namespace Ivy.Entities
 
         public string Id { get; set; }
         public OrderStatus Status { get; set; }
-        public Dictionary<int, Product> Products { get; } = new();
+        public List<OrderItem> Items { get; } = new();
 
         public void Add(int quantity, Product product)
         {
-            Products.Add(quantity, product);
+            Items.Add(new OrderItem(product, quantity));
         }
     }
     

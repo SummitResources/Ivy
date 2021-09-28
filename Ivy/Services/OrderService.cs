@@ -3,6 +3,9 @@ using Ivy.Entities;
 
 namespace Ivy.Services
 {
+    /// <summary>
+    /// Class that allows us to place orders with all the necessary validations 
+    /// </summary>
     public class OrderService
     {
         private readonly InventoryService _inventoryService;
@@ -19,12 +22,12 @@ namespace Ivy.Services
 
         public void Fulfill(Order order)
         {
-            foreach (var product in order.Products.Values)
+            foreach (var item in order.Items)
             {
-                var productInInventory = _inventoryService.Find(product.Name);
-                if (productInInventory is null)
+                var inventory = _inventoryService.Find(item.Product.Name);
+                if (inventory is null)
                 {
-                    throw new OrderException($"Could not find product '{product.Name}' in inventory");
+                    throw new OrderException($"Could not find product '{item.Product.Name}' in inventory");
                 }
                 
                 // TODO ensure the quantity is available
