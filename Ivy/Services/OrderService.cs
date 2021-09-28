@@ -20,6 +20,11 @@ namespace Ivy.Services
             return new Order(Guid.NewGuid().ToString("N"), OrderStatus.Created);
         }
 
+        public decimal CalculateShippingCost(Order order)
+        {
+            return 0;
+        }
+        
         public void Fulfill(Order order)
         {
             foreach (var item in order.Items)
