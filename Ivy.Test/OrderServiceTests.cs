@@ -67,5 +67,23 @@ namespace Ivy.Test
             
             Assert.Equal(cost, orderService.CalculateShippingCost(order));
         }
+
+        [Fact]
+        public void Calculate_Shipping_Cost_Multiple_Products()
+        {
+            var inventory = new InventoryService();
+            var product1 = inventory.Add( 2, "Pencil",    40, price: 0 /* irrelevant for this test */); //  2 x 40g pencil =  80g   
+            var product2 = inventory.Add(50, "Paper",     10, price: 0 /* irrelevant for this test */); // 50 x 10g pencil = 500g
+            var product3 = inventory.Add(10, "Sharpener", 30, price: 0 /* irrelevant for this test */); // 10 x 30g pencil = 300g
+            // Total weight: 880g
+            
+            var orderService = new OrderService(inventory);
+            var order = orderService.Create();
+            order.Add( 2, product1);
+            order.Add(50, product2);
+            order.Add(10, product3);
+            
+            Assert.Equal(7, orderService.CalculateShippingCost(order));
+        }
     }
 }
